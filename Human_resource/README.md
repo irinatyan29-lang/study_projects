@@ -39,7 +39,7 @@
 
 ## ML Pipeline
 
-![Final Model Pipeline](images/slide_final_model-1.png)
+![Final Model Pipeline](images/mlpipe.png)
 
 > Пайплайн финальной ML-модели: обработка пропусков → кодирование категорий → нормализация → перебор 6 моделей через GridSearch.
 
@@ -49,7 +49,7 @@
 
 ## Результаты ML-моделей
 
-![ML Best Model Results](images/slide_ml_best-1.png)
+![ML Best Model Results](images/mlbr.png)
 
 > Сравнение всех моделей по ROC-AUC, BalancedAcc и PR-AUC на train/test. Лучший результат показала **Logistic Regression** (Test ROC-AUC = 0.832, Test PR-AUC = 0.609) - оптимальный баланс качества и интерпретируемости.
 
@@ -57,7 +57,7 @@
 
 ## Важнейшие признаки модели
 
-![Most Contributed Features](images/slide_features-1.png)
+![Most Contributed Features](images/mcf.png)
 
 > Топ-15 признаков по абсолютной величине коэффициентов логистической регрессии. Наибольший вклад вносят: частота командировок, переработки (`OverTime`), роль в компании и уровень неудовлетворённости.
 
@@ -67,25 +67,25 @@
 
 ## Deep Learning Pipeline (ANN)
 
-![Deep Learning Models](images/slide_deep_models-1.png)
+![Deep Learning Models](images/dlpipe.png)
 
 > ANN-пайплайн: два датасета (`ann_compact_df` и `ann_full_df`) → импутация → One-Hot Encoding → Winsorizer → MinMax Scaler → ANN → evaluate.
 
 ### Результаты - компактный датасет
 
-![ANN Compact Results](images/slide_compact-1.png)
+![ANN Compact Results](images/dl_c_d.png)
 
 > ROC-AUC train/test: 0.870 / 0.812. Модель хорошо обобщает, но переобучение из-за дисбаланса классов - класс 1 (уволился) пропускается часто.
 
 ### Результаты - полный датасет
 
-![ANN Full Results](images/slide_full-1.png)
+![ANN Full Results](images/dl_fr.png)
 
 > ROC-AUC train/test: 0.867 / 0.814. Хорошее разделение классов, однако разрыв между train и test на PR-кривой указывает на умеренное переобучение.
 
 ### Результаты после балансировки (`compute_class_weight`)
 
-![Class Weight Results](images/slide_class_weight-1.png)
+![Class Weight Results](images/dlcreg.png)
 
 > Балансировка через `compute_class_weight` не оправдала ожиданий - метрики незначительно улучшились или даже ухудшились. Модель по-прежнему уверенно предсказывает класс 0, но плохо справляется с классом 1.
 
