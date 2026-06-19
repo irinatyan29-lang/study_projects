@@ -8,6 +8,7 @@
 ![Status](https://img.shields.io/badge/Status-Completed-brightgreen?style=flat-square)
 
 ---
+## Командный проект школы VeraVla в данном проекте я занималась анализом и обучением моделей.
 
 ##  О проекте
 
