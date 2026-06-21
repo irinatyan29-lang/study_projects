@@ -79,29 +79,21 @@ Enron Dataset - один из немногих публичных корпора
 
 ### F1-score и ROC-AUC
 
-![Model Metrics](model_metrics.png)
-
-| Модель | F1 Train | F1 Test | ROC-AUC Test |
-|---|---|---|---|
-| **SVM** | 0.99 | **0.97** | **0.995** |
-| XGBoost | 0.99 | 0.96 | 0.993 |
-| Logistic Reg. | 0.98 | 0.96 | 0.992 |
-| Random Forest | 0.99 | 0.95 | 0.990 |
-| Naive Bayes | 0.95 | 0.92 | 0.975 |
+![Model Metrics](roc_auc.png)
 
 ---
 
 ### Время обучения
 
-![Training Time](training_time.png)
+![Training Time](time.png)
 
 | Модель | Время обучения |
 |---|---|
-| Naive Bayes | 1.23 сек |
-| Logistic Regression | 1.23 сек |
-| Random Forest | 2.76 сек |
-| XGBoost | 3.64 сек |
-| **SVM** | **7.10 сек** |
+| Naive Bayes | 1.16 сек |
+| Logistic Regression | 1.31 сек |
+| Random Forest | 2.92 сек |
+| XGBoost | 4.12 сек |
+| **SVM** | **7.55 сек** |
 
 ---
 
