@@ -1,4 +1,4 @@
-# Spam Classification — Enron Email Dataset
+# Spam Classification - Enron Email Dataset
 
 > **Задача:** Бинарная классификация писем - **spam (1)** или **ham (0)** - с помощью машинного обучения и TF-IDF векторизации.
 
@@ -135,12 +135,3 @@ scikit-learn • xgboost
 TF-IDF • Pipeline • StratifiedSplit
 ```
 
----
-
-##  Структура проекта
-
-```
-├── Emails_dataset_models.ipynb   # Основной ноутбук
-├── emails.csv                    # Датасет
-└── README.md
-```
