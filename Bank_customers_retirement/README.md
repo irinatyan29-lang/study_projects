@@ -36,18 +36,10 @@
 
 ---
 
-### Пропущенные значения
-
-![Missing Values](missing_values.png)
-
-- **Age (~4.4%)** - пропуски случайные (MCAR): можно заменять простыми методами (mean, median, RandomSampleImputation)
-- **401K Savings (~3.2%)** - пропуски не случайные (MAR): зависят от возраста, поэтому предпочтительны **KNNImputer** или **IterativeImputer**
-
----
 
 ### Взаимосвязь возраста и накоплений
 
-![Age Savings Scatter](age_savings_scatter.png)
+![Age Savings Scatter](savbyage.png)
 
 Прослеживается **положительная корреляция**: чем старше клиент, тем выше его накопления. Клиенты, которые ушли (`Retire = 1`), в среднем **старше и богаче** тех, кто остался.
 
@@ -55,7 +47,7 @@
 
 ### Уход по возрастным группам
 
-![Retirement by Age](retirement_by_age.png)
+![Retirement by Age](ret.png)
 
 | Возрастная группа | % ушедших |
 |---|---|
@@ -70,7 +62,7 @@
 
 ### Накопления 401K по возрасту и статусу клиента
 
-![Savings by Age & Retire](savings_by_age_retire.png)
+![Savings by Age & Retire](sbyage&retire.png)
 
 Во всех возрастных группах ушедшие клиенты имеют **заметно большие накопления**, чем оставшиеся. Разрыв нарастает с возрастом.
 
@@ -109,16 +101,7 @@
 
 ### Сравнение моделей
 
-![Model Metrics](model_metrics.png)
-
-| Модель | Accuracy Test | ROC-AUC Test |
-|---|---|---|
-| Baseline (LogReg) | 0.872 | 0.944 |
-| Logistic Regression | 0.883 | 0.952 |
-| Decision Tree | 0.895 | 0.921 |
-| KNN | 0.889 | 0.940 |
-| SVM | 0.886 | 0.950 |
-| **Random Forest** | **0.930** | **0.965** |
+![Model Metrics](results.png)
 
 ---
 
@@ -138,7 +121,6 @@
    - Масштабирование (StandardScaler, MinMax, Robust) - незначительный эффект
    - Сложные методы импутации для 401K Savings - минимальная разница с простым Mean
 
-5. **Ограничение:** из-за малого числа признаков (всего 2 значимых: Age и 401K Savings) точность выше ~95% достичь не удалось - датасет принципиально прост по структуре.
 
 ---
 
